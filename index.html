@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* Importing Montserrat font */
+    </style>
+    <script src="https://kit.fontawesome.com/63e14c754d.js" crossorigin="anonymous"></script>
+    <title>TinCOM</title>
+</head>
+<body>
+    <div id="main-container">
+    <div class="container">
+        <nav>
+            <h2 class="logo ">TinCOM</h2>
+            <div class="ul">
+                <a href="#">What's New</a>
+                <a href="#">Store</a>
+                <a href="#">Men's</a>
+                <a href="#">Women's</a>
+                <a href="#" id="last-anchor">Brands</a>
+                <div id="dark-mode-toggle"><img src="moon.png" height="30px" width="30px"></div>
+            </div>
+            <!--<button id="sign-in">Sign in</button>-->
+            <i class="nav-icon" class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="main-content">
+            <div class="left">
+                <h1>Welcome to the <span id="cool">Coolest</span> Clothing E-Commerce Platform in India! </h1>
+                <p>Discover the latest trends and shop from a curated collection of stylish and fashionable apparel. Whether you're looking for casual wear, formal attire, or the newest accessories, we have everything you need to elevate your wardrobe. Join us for an unparalleled shopping experience where quality meets affordability.</p>
+                <button id="upper-button">Shop Now!</button>
+            </div>
+            <div class="right"></div>
+        </div>
+
+           <!--Section of image gallery starts-->
+           <div class="product">
+            <div class="img-left">
+            <div class="product-small-img">
+                <img alt="img1" src="img1.avif" onclick="myFunction(this)">
+                <img alt="img2" src="img2.avif" onclick="myFunction(this)">
+                <img alt="img3" src="img3.avif" onclick="myFunction(this)">
+                <img alt="img4" src="img4.avif" onclick="myFunction(this)">
+                <!--<img alt="img5" src="../E-commmerce frontend/product-images/img5.avif" onclick="myFunction(this)">-->
+                <img alt="img6" src="img6.avif" onclick="myFunction(this)">
+            </div>
+            <div class="image-container">
+                <img id="imagebox" alt="img1" src="img1.avif">
+            </div>
+        </div>
+            <div class="product-description-right">
+                <div class="content">
+                <h2>Forever 21 Textured Shirt</h2>
+                <P>Make a cool and casual addition to your daily wear closet with this Blue Checked Shirts from Forever21. Pair the top with trendy jeans </P>
+                <ul>
+                    <li>Product Type:<span>Shirts</span></li>
+                    <li>Net Quantity: <span>1 N</span></li>
+                    <li>Manufactured Date: <span>March 2024</span></li>
+                    <li>Country of Origin: <span>India</span></li>
+                </ul>
+                <span id="product-rating-button"><button> 4.5 <i class="fa-solid fa-star"></i></button> 11,000 ratings and 2500 reviews</span>
+                <div class="price">
+                    <p class="current-price">Rs. 599</p>
+                    <p class="original-price">1200</p>
+                    <p class="discount">(50%)</p>
+                </div>
+                <button id="upper-button1"><i class="fa-solid fa-cart-shopping"></i>Buy Now</button>
+            </div>
+            </div>
+        </div>
+
+    <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1<img src="pexels-kish-1488463.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 2<img src="pexels-olly-3763884.jpg" alt="slider"> </div>
+      <div class="swiper-slide">Slide 3<img src="pexels-renzylaurel-9370916.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 4<img src="pexels-ron-lach-8311894.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 5<img src="pexels-bleri-22609047.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 6<img src="pexels-cottonbro-5119398.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 7<img src="pexels-anna-nekrashevich-8532616.jpg" alt="slider"></div>
+      <div class="swiper-slide">Slide 8<img id="slide8" src="PRIDE-BANNER.webp" alt="slider"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="foot">
+    <p>Made with &hearts; in India by <a id="profile" href="https://askgurdit.github.io/Responsive-File-Card1/">Gurdit Singh</a></p>
+    <p id="below">&copy; 2024 TinCOM. All rights reserved.</p>
+</div>
+    </div>
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script src="logic.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+          delay: 3000, // Delay between slides in milliseconds (3 seconds)
+          disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+        },
+        loop: true, // Enable looping of slides
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+    });
+  </script>
+</html>

@@ -1,0 +1,424 @@
+html, body {
+    margin: 0;              /* Removes default margin */
+    padding: 0;             /* Removes default padding */
+    height: 100%;           /* Ensures the body takes full height */
+    width: 100%;            /* Ensures the body takes full width */
+    font-family: Arial, sans-serif;  /* Sets a default font family */
+    color: #333;            /* Sets a default text color */
+    line-height: 1.6;       /* Improves readability */
+    font-family: "Montserrat", sans-serif;
+}
+*::selection {
+    color: white;
+    background-color: #6C63FF;
+}
+#main-container {
+    margin: 0;              /* Removes default margin */
+    padding: 0;     
+    height: 100%;           /* Ensures the body takes full height */
+    width: 100%; 
+}
+.container {
+    height: 100%;
+    width: 100%;
+}
+.logo {
+    margin-left: -5vw;
+    margin-top: 2.5vh;
+    margin-right: 8vw;
+}
+nav {
+    width:100vw;
+    height:calc(100% - 91.5%);
+    border-bottom:2px solid rgba(128, 128, 128, 0.632);
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.ul {
+    display: flex;
+    gap: 4vw;
+    list-style: none;
+    margin-top: 1.5vh;
+    margin-right: 5vw;
+}
+.ul a {
+    margin-top: 2.5vh;
+    margin-right: 1vw;
+    text-decoration: none;
+    color: black;
+}
+#last-anchor {
+    margin-right: 20vw;
+}
+
+/*-------Nav button--------*/
+i {
+    padding-top: 3.5vh;
+    padding-right: 3vw;
+    font-weight: 800;
+    font-size: larger;
+    display: none;
+}
+i:hover{
+    background-color: grey;
+    border-radius: 50%;
+}
+
+/*-----Main Content starts-------*/
+.main-content {
+    height:calc(100% - 8.8%);
+    width: 100%;
+    display: flex;
+}
+.left {
+    height:100%;
+    width: calc(100% - 50%);
+    margin-left: 3vw;
+}
+.right {
+    height: 100%;
+    width: calc(100% - 50%);
+    background-image: url('vector.svg'); /* Set your image path here */
+    background-size: contain; /* Ensure the entire image is contained within the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Center the image within the div */
+}
+h1 {
+    padding-top: 100px;
+    padding-right: 90px;
+    font-weight: 800;
+    font-size:3vw;
+}
+h1 span {
+    color: #6C63FF;
+}
+.left p {
+    padding-right: 120px;
+    text-align: justify;
+    font-weight: 450;
+}
+#upper-button {
+    border-radius: 5%;
+    font-size: large;
+    margin-top:15px;
+    padding: 1vh 1vw;
+    outline: none;
+    border:none;
+    background-color:#6C63FF;
+    color:white;
+    font-weight: 600;
+}
+#sign-in {
+    border-radius: 5%;
+    font-size: large;
+    outline: none;
+    border:none;
+    margin-right:50px;
+    background-color:#6C63FF;
+    color:white;
+    font-weight: 600;
+}
+/* Style for screens narrower than 600px */
+@media screen and (max-width: 600px) {
+    body {
+      background-color: antiquewhite;
+    }
+    .main-content {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    } 
+    .left {
+        height:100%;
+        width: 100%;
+        margin-left: 5vw;
+    }
+        h1 {
+            padding-top:50px;
+            padding-right: 25px;
+            font-weight: 800;
+            font-size:5vw;
+            text-align:start;
+        }    
+        .right {
+            height: 100%;
+            width: 90%;
+            margin-top: -10em;
+            background-image: url('vector.svg'); /* Set your image path here */
+            background-size: contain; /* Ensure the entire image is contained within the div */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Center the image within the div */
+        } 
+        ul {
+            display: none;
+            gap: 4vw;
+            list-style: none;
+            margin-top: 3vh;
+            margin-right: -45vw;
+        }
+        i {
+            padding-top: 3.5vh;
+            padding-right: 7vw;
+            font-weight: 800;
+            font-size: larger;
+            display: block;
+        }
+    }
+  /* Section of image gallery starts */
+  .product {
+    /*top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;*/
+    display: flex;
+   /* flex-direction: row;
+    justify-content: center;
+    align-items: center;*/
+  }
+  .img-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-small-img img {
+    height: 92px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: block;
+    padding: 5px 12px 5px 5px;
+    opacity: 0.6;
+  }
+  .product-small-img img:hover{
+    opacity: 1;
+  }
+  .product-small-img {
+    margin-left: 20vw;
+    float: left;
+  }
+  .image-container img {
+    height: 500px;
+  }
+  .image-container {
+    float: right;
+  }
+.product-description-right {
+    width: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    height:100%;
+    width:80%;
+}
+/*.content h2 {
+    
+}*/
+.content ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    list-style: none;
+    margin-top: 1.5vh;
+    margin-right: 0vw;
+}
+.content li {
+    margin-bottom: 2px; /* Add space between items */
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: -5vh;
+
+}
+.content li span {
+    display: block; /* Ensure each span starts on a new line */
+    font-weight: bold; /* Bold the span content */
+    margin-left: 1vw;
+}
+.content i {
+    padding: 0% 0%;
+    margin-left: 3px;
+}
+.content button {
+    padding: 0 10px; /* Adjust padding for desired size */
+    margin-top: 25px;
+    color: white;
+    background-color: green;
+    padding: 2px 5px;
+    margin-right: 6px ;
+}
+/*.content #product-rating-button {
+}*/
+.price {
+    display: flex;
+    align-items: baseline; /* Aligns elements by their baseline for better layout */
+    gap: 10px; /* Adds space between elements */
+}
+
+.current-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.discount {
+    font-size: 0.9em;
+    color: grey;
+}
+.fa-solid {
+    font-size: medium;
+    margin-left: -1vw;
+    margin-right: 1vw;
+}
+#upper-button1 {
+    border-radius: 5%;
+    font-size: large;
+    margin-top:15px;
+    padding: 1vh 1vw;
+    outline: none;
+    border:none;
+    background-color:#6C63FF;
+    color:white;
+    font-weight: 600;
+}
+
+/*------------Swiper js slider-------->*/
+html,
+    body {
+      position: relative;
+    }
+
+    body {
+      background: #eee;
+      font-family:"Montserrat";
+      /*font-size: 14px;*/
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-top: 0px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-slide #slide8 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+      }
+      .foot p {
+        text-align: center;
+        color: #6C63FF;
+        font-size: medium;
+        margin-top: 0px;
+        margin-bottom: -15px;
+        font-weight: 800;
+        font-size: large;
+    }
+    .foot a {
+        text-decoration: none;
+    }
+    .foot #below {
+        margin-top: 25px;
+    }
+    #dark-mode-toggle {
+        font-size:smaller;
+        display:flex;
+        height: 30px;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        outline: none; /* Ensures no outline is shown on focus */
+        border-radius: 0; /* Ensures no border radius */
+        padding: 0; /* Ensures no padding */
+        margin-right: -5vw;
+        overflow: hidden;
+        margin-top: 1.5vh;
+    }
+    
+    nav:hover {
+        outline: none; /* Ensures no outline is shown on hover or focus */
+        box-shadow: none; /* Removes any box shadow */
+        background-color: transparent; /* Ensures no background color change */
+        border-radius: 0; /* Ensures no border radius */
+        padding: 0; /* Ensures no padding */
+    }
+    
+    
+/*---------Dark Mode---------*/
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode nav {
+    border-bottom: 2px solid #444;
+}
+
+.dark-mode .ul a {
+    color: white;
+}
+
+.dark-mode .right {
+    background: url("vector.svg");
+    height: 100%;
+    width: calc(100% - 50%);
+    background-size: contain; /* Ensure the entire image is contained within the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+}
+
+.dark-mode p {
+    color: white;
+}
+
+.dark-mode #cool {
+    color: #ddd;
+}
+
+/* Additional dark mode styles for other elements */
+.dark-mode .product  {
+    background-color: #222;
+}
+
+.dark-mode .product h2, .dark-mode .product p, .dark-mode .product ul li, .dark-mode .product .price {
+    color: white;
+}
+
+.dark-mode .product .current-price, .dark-mode .product .original-price, .dark-mode .product .discount {
+    color: #ddd;
+}
+.dark-mode .foot  {
+    background-color: #222;
+}
+.dark-mode .swiper-slide {
+    background:#222;
+  }
